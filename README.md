@@ -1,5 +1,5 @@
 There are three examples:
-1. standard real-time event processing with window and without windonw.
+1. standard real-time event processing with window(deal with late arriving events with different solution) and without window.
 
 path: Audience/src/clam_demo/java/org/lei/Demo.java
 
