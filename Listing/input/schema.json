@@ -1,0 +1,2898 @@
+[
+  {
+    "name": "derived_1",
+    "mode": "",
+    "type": "RECORD",
+    "description": "",
+    "fields": [
+      {
+        "name": "listing",
+        "mode": "",
+        "type": "RECORD",
+        "description": "",
+        "fields": [
+          {
+            "name": "id",
+            "mode": "",
+            "type": "INTEGER",
+            "description": "Unique identifier representing a specific listing.",
+            "fields": []
+          },
+          {
+            "name": "isPublishable",
+            "mode": "",
+            "type": "BOOLEAN",
+            "description": "DEPRECATED",
+            "fields": []
+          }
+        ]
+      },
+      {
+        "name": "ingestedAt",
+        "mode": "",
+        "type": "TIMESTAMP",
+        "description": "",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "name": "documentType",
+    "mode": "",
+    "type": "STRING",
+    "description": "Document type",
+    "fields": []
+  },
+  {
+    "name": "processedAt",
+    "mode": "",
+    "type": "TIMESTAMP",
+    "description": "UTC Timestamp when the query is served",
+    "fields": []
+  },
+  {
+    "name": "operation",
+    "mode": "",
+    "type": "RECORD",
+    "description": "",
+    "fields": [
+      {
+        "name": "delete",
+        "mode": "",
+        "type": "RECORD",
+        "description": "",
+        "fields": [
+          {
+            "name": "id",
+            "mode": "",
+            "type": "INTEGER",
+            "description": "Unique identifier representing a specific listing.",
+            "fields": []
+          }
+        ]
+      },
+      {
+        "name": "put",
+        "mode": "",
+        "type": "RECORD",
+        "description": "",
+        "fields": [
+          {
+            "name": "displayAddress",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "streetNumber",
+                "mode": "",
+                "type": "STRING",
+                "description": "Street number of the listing address",
+                "fields": []
+              },
+              {
+                "name": "_embedded",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "atlasObject",
+                    "mode": "REPEATED",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "subtype",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Type of the Atlas object - one of the possible list of values",
+                        "fields": []
+                      },
+                      {
+                        "name": "id",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Unique Atlas object id for the display home address of the project",
+                        "fields": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "openingHours",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "Opening hours of the display address, normally a display suite of a Project Profile",
+                    "fields": [
+                      {
+                        "name": "timezone",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Local timezone of the time",
+                        "fields": []
+                      },
+                      {
+                        "name": "exemptions",
+                        "mode": "REPEATED",
+                        "type": "STRING",
+                        "description": "Exemptions from the normal opening hours",
+                        "fields": []
+                      },
+                      {
+                        "name": "openingHoursSpecification",
+                        "mode": "REPEATED",
+                        "type": "RECORD",
+                        "description": "A list of opening hours",
+                        "fields": [
+                          {
+                            "name": "startTime",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "start time of opening hour",
+                            "fields": []
+                          },
+                          {
+                            "name": "endTime",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "end time of opening hour",
+                            "fields": []
+                          },
+                          {
+                            "name": "dayOfWeek",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "Day of the week for the opening hour",
+                            "fields": []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "postcode",
+                "mode": "",
+                "type": "STRING",
+                "description": "Postcode of the listing address",
+                "fields": []
+              },
+              {
+                "name": "display",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "communicationAddress",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "The communication address to be displayed to the consumer for the display home",
+                    "fields": []
+                  },
+                  {
+                    "name": "shortAddress",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "The short address to be displayed for the display home",
+                    "fields": []
+                  },
+                  {
+                    "name": "fullAddress",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "The full address to be displayed for the display home",
+                    "fields": []
+                  },
+                  {
+                    "name": "geocode",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "reliability",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "The geocode reliability, based upon AS4590-1999",
+                        "fields": []
+                      },
+                      {
+                        "name": "longitude",
+                        "mode": "",
+                        "type": "FLOAT",
+                        "description": "The geocode longitude for the display home address",
+                        "fields": []
+                      },
+                      {
+                        "name": "latitude",
+                        "mode": "",
+                        "type": "FLOAT",
+                        "description": "The geocode latitude for the display home address",
+                        "fields": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "countryCode",
+                "mode": "",
+                "type": "STRING",
+                "description": "Country code of the display home address (e.g., 'AU')",
+                "fields": []
+              },
+              {
+                "name": "isHidden",
+                "mode": "",
+                "type": "BOOLEAN",
+                "description": "true, if the Agent chooses to hide the display home address from the consumer.",
+                "fields": []
+              },
+              {
+                "name": "suburb",
+                "mode": "",
+                "type": "STRING",
+                "description": "Suburb of the display home address",
+                "fields": []
+              },
+              {
+                "name": "streetName",
+                "mode": "",
+                "type": "STRING",
+                "description": "Street name of the display home address",
+                "fields": []
+              },
+              {
+                "name": "state",
+                "mode": "",
+                "type": "STRING",
+                "description": "State of the display home address",
+                "fields": []
+              },
+              {
+                "name": "description",
+                "mode": "",
+                "type": "STRING",
+                "description": "Description of the display home",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "dateEstimatedCompletion",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "display",
+                "mode": "",
+                "type": "STRING",
+                "description": "Estimated completion date to be displayed to the consumer for the project",
+                "fields": []
+              },
+              {
+                "name": "date",
+                "mode": "",
+                "type": "DATE",
+                "description": "Estimated completion date for the project",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "textTotalNumberProperties",
+            "mode": "",
+            "type": "STRING",
+            "description": "Total number of properties available in the project",
+            "fields": []
+          },
+          {
+            "name": "energyEfficiencyRating",
+            "mode": "",
+            "type": "FLOAT",
+            "description": "Energy efficiency rating for the listed property",
+            "fields": []
+          },
+          {
+            "name": "yearLastRenovated",
+            "mode": "",
+            "type": "STRING",
+            "description": "An ISO-8601 timestamp (UTC) representing the last renovated datetime of a listing",
+            "fields": []
+          },
+          {
+            "name": "numBathrooms",
+            "mode": "",
+            "type": "INTEGER",
+            "description": "Number of bathrooms available",
+            "fields": []
+          },
+          {
+            "name": "isPublishable",
+            "mode": "",
+            "type": "BOOLEAN",
+            "description": "DEPRECATED",
+            "fields": []
+          },
+          {
+            "name": "highlights",
+            "mode": "REPEATED",
+            "type": "STRING",
+            "description": "Highlighted features of the project",
+            "fields": []
+          },
+          {
+            "name": "landSize",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "unit",
+                "mode": "",
+                "type": "STRING",
+                "description": "Unit of measure for the land size Always m2.",
+                "fields": []
+              },
+              {
+                "name": "value",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "DEPRECATED",
+                "fields": []
+              },
+              {
+                "name": "rawValue",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "Land size value for the listed property",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "soldPrice",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "display",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "shortSoldPrice",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Short sold price to display to consumer",
+                    "fields": []
+                  },
+                  {
+                    "name": "advertisingRange",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Calculated price range for which the sold property is to be displayed in sold search results when filtered by price",
+                    "fields": []
+                  },
+                  {
+                    "name": "fullSoldPrice",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Full sold price to display to consumer",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "price",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "value",
+                    "mode": "",
+                    "type": "INTEGER",
+                    "description": "The actual sold price value",
+                    "fields": []
+                  },
+                  {
+                    "name": "source",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Where the displayed sold price was sourced from",
+                    "fields": []
+                  },
+                  {
+                    "name": "currency",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Currency of the sold price for the listing",
+                    "fields": []
+                  },
+                  {
+                    "name": "isHidden",
+                    "mode": "",
+                    "type": "BOOLEAN",
+                    "description": "true, if Agent has chosen to hide the sold price.",
+                    "fields": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "soilTypes",
+            "mode": "",
+            "type": "STRING",
+            "description": "Soil type details for the listed property",
+            "fields": []
+          },
+          {
+            "name": "description",
+            "mode": "",
+            "type": "STRING",
+            "description": "Description for the listing",
+            "fields": []
+          },
+          {
+            "name": "businessPhone",
+            "mode": "",
+            "type": "STRING",
+            "description": "Business phone number to contact on for project profile enquiries",
+            "fields": []
+          },
+          {
+            "name": "dateAvailable",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "date",
+                "mode": "",
+                "type": "STRING",
+                "description": "Date the rental listing will be available",
+                "fields": []
+              },
+              {
+                "name": "display",
+                "mode": "",
+                "type": "STRING",
+                "description": "Date available to be displayed to the consumer for the rental listing",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "rearDepth",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "unit",
+                "mode": "",
+                "type": "STRING",
+                "description": "Unit of measure for the right depth. Always m.",
+                "fields": []
+              },
+              {
+                "name": "value",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "DEPRECATED",
+                "fields": []
+              },
+              {
+                "name": "rawValue",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "The depth value for the listed property",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "_embedded",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "listingFeature",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "id",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "ID of the available listing features",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "primaryUsage",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "id",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Primary usage for the listing",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "event",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "startLocalTime",
+                    "mode": "",
+                    "type": "TIMESTAMP",
+                    "description": "UTC end time for the event start",
+                    "fields": []
+                  },
+                  {
+                    "name": "endLocalTime",
+                    "mode": "",
+                    "type": "TIMESTAMP",
+                    "description": "UTC end time for the event end",
+                    "fields": []
+                  },
+                  {
+                    "name": "startTime",
+                    "mode": "",
+                    "type": "TIMESTAMP",
+                    "description": "DO NOT USE - This data can be inaccurate for some listings",
+                    "fields": []
+                  },
+                  {
+                    "name": "endTime",
+                    "mode": "",
+                    "type": "TIMESTAMP",
+                    "description": "DO NOT USE - This data can be inaccurate for some listings",
+                    "fields": []
+                  },
+                  {
+                    "name": "type",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Type of event",
+                    "fields": []
+                  },
+                  {
+                    "name": "id",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Unique ID for the event",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "video",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "_links",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "preview",
+                        "mode": "",
+                        "type": "RECORD",
+                        "description": "",
+                        "fields": [
+                          {
+                            "name": "href",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "URL where a listing video is provided",
+                            "fields": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "youtube",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "id",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "",
+                        "fields": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "secondaryUsage",
+                "mode": "REPEATED",
+                "type": "STRING",
+                "description": "Currently, not used",
+                "fields": []
+              },
+              {
+                "name": "salesperson",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "_links",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "self",
+                        "mode": "",
+                        "type": "RECORD",
+                        "description": "",
+                        "fields": [
+                          {
+                            "name": "href",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "DEPRECATED",
+                            "fields": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "id",
+                    "mode": "",
+                    "type": "INTEGER",
+                    "description": "REA salesperson ID of the salesperson attached to the listing",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "child",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "_links",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "DEPRECATED",
+                    "fields": [
+                      {
+                        "name": "self",
+                        "mode": "",
+                        "type": "RECORD",
+                        "description": "",
+                        "fields": [
+                          {
+                            "name": "href",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "DEPRECATED",
+                            "fields": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "id",
+                    "mode": "",
+                    "type": "INTEGER",
+                    "description": "Listing ID of the project child",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "parent",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "id",
+                    "mode": "",
+                    "type": "INTEGER",
+                    "description": "Listing ID of the parent listing if it is associated as a child to a project profile",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "property",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "id",
+                    "mode": "",
+                    "type": "INTEGER",
+                    "description": "The property id of the listing if known",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "listingUpgrade",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "exceptionApplied",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "DEPRECATED",
+                    "fields": []
+                  },
+                  {
+                    "name": "enteredDate",
+                    "mode": "",
+                    "type": "TIMESTAMP",
+                    "description": "DEPRECATED",
+                    "fields": []
+                  },
+                  {
+                    "name": "deletedDate",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "DEPRECATED",
+                    "fields": []
+                  },
+                  {
+                    "name": "startDate",
+                    "mode": "",
+                    "type": "TIMESTAMP",
+                    "description": "DEPRECATED",
+                    "fields": []
+                  },
+                  {
+                    "name": "_embedded",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "DEPRECATED",
+                    "fields": [
+                      {
+                        "name": "listingProduct",
+                        "mode": "",
+                        "type": "RECORD",
+                        "description": "",
+                        "fields": [
+                          {
+                            "name": "id",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "",
+                            "fields": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "endDate",
+                    "mode": "",
+                    "type": "TIMESTAMP",
+                    "description": "DEPRECATED",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "agency",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "_links",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "self",
+                        "mode": "",
+                        "type": "RECORD",
+                        "description": "",
+                        "fields": [
+                          {
+                            "name": "href",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "DEPRECATED",
+                            "fields": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "id",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "REA Agency ID",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "attachment",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "orderIndex",
+                    "mode": "",
+                    "type": "INTEGER",
+                    "description": "Determines the order of display when displaying all attachments for the listing",
+                    "fields": []
+                  },
+                  {
+                    "name": "caption",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Caption provided for an attachment",
+                    "fields": []
+                  },
+                  {
+                    "name": "extension",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Extension for the attachment file type",
+                    "fields": []
+                  },
+                  {
+                    "name": "type",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Type of attachment",
+                    "fields": []
+                  },
+                  {
+                    "name": "sha",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Unique sha ID for the attachment",
+                    "fields": []
+                  },
+                  {
+                    "name": "id",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Unqiue ID for the attachment",
+                    "fields": []
+                  },
+                  {
+                    "name": "templatedUrl",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "A templated url to allow for simple construction of REA's public attachments server URL. `{size}` must be provided eg. `original` (documents and images) or `800x600` (images only).",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "listingDepth",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "exceptionApplied",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "DEPRECATED",
+                    "fields": []
+                  },
+                  {
+                    "name": "enteredDate",
+                    "mode": "",
+                    "type": "TIMESTAMP",
+                    "description": "DEPRECATED",
+                    "fields": []
+                  },
+                  {
+                    "name": "deletedDate",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "DEPRECATED",
+                    "fields": []
+                  },
+                  {
+                    "name": "startDate",
+                    "mode": "",
+                    "type": "TIMESTAMP",
+                    "description": "DEPRECATED",
+                    "fields": []
+                  },
+                  {
+                    "name": "_embedded",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "listingProduct",
+                        "mode": "",
+                        "type": "RECORD",
+                        "description": "",
+                        "fields": [
+                          {
+                            "name": "id",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "",
+                            "fields": []
+                          },
+                          {
+                            "name": "_embedded",
+                            "mode": "",
+                            "type": "RECORD",
+                            "description": "",
+                            "fields": [
+                              {
+                                "name": "listingproductaddon",
+                                "mode": "REPEATED",
+                                "type": "RECORD",
+                                "description": "Additional product purchased by agent",
+                                "fields": [
+                                  {
+                                    "name": "id",
+                                    "mode": "",
+                                    "type": "STRING",
+                                    "description": "",
+                                    "fields": []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "endDate",
+                    "mode": "",
+                    "type": "TIMESTAMP",
+                    "description": "DEPRECATED",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "projectTeam",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "name",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "project team name",
+                    "fields": []
+                  },
+                  {
+                    "name": "type",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "project team type",
+                    "fields": []
+                  },
+                  {
+                    "name": "description",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "project team description",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "pastproject",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "id",
+                    "mode": "",
+                    "type": "INTEGER",
+                    "description": "primary key",
+                    "fields": []
+                  },
+                  {
+                    "name": "displayorder",
+                    "mode": "",
+                    "type": "INTEGER",
+                    "description": "past project display order",
+                    "fields": []
+                  },
+                  {
+                    "name": "name",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "past project name",
+                    "fields": []
+                  },
+                  {
+                    "name": "address",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "past project address",
+                    "fields": [
+                      {
+                        "name": "streetnumber",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "number of the listing address",
+                        "fields": []
+                      },
+                      {
+                        "name": "_embedded",
+                        "mode": "",
+                        "type": "RECORD",
+                        "description": "",
+                        "fields": [
+                          {
+                            "name": "atlasobject",
+                            "mode": "REPEATED",
+                            "type": "RECORD",
+                            "description": "",
+                            "fields": [
+                              {
+                                "name": "subtype",
+                                "mode": "",
+                                "type": "STRING",
+                                "description": "Type of the Atlas object - one of the possible list of values",
+                                "fields": []
+                              },
+                              {
+                                "name": "id",
+                                "mode": "",
+                                "type": "STRING",
+                                "description": "Unique Atlas object id for the address of the listing",
+                                "fields": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "postcode",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Postcode of the display home address",
+                        "fields": []
+                      },
+                      {
+                        "name": "display",
+                        "mode": "",
+                        "type": "RECORD",
+                        "description": "",
+                        "fields": [
+                          {
+                            "name": "communicationaddress",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "The communication address to be displayed to the consumer for the listing.",
+                            "fields": []
+                          },
+                          {
+                            "name": "shortaddress",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "The short address to be displayed for the listing. Usually, just the street number and name.",
+                            "fields": []
+                          },
+                          {
+                            "name": "fulladdress",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "The full address to be displayed for the listing.",
+                            "fields": []
+                          },
+                          {
+                            "name": "geocode",
+                            "mode": "",
+                            "type": "RECORD",
+                            "description": "",
+                            "fields": [
+                              {
+                                "name": "reliability",
+                                "mode": "",
+                                "type": "STRING",
+                                "description": "The geocode reliability, based upon AS4590-1999",
+                                "fields": []
+                              },
+                              {
+                                "name": "longitude",
+                                "mode": "",
+                                "type": "FLOAT",
+                                "description": "The geocode longitude for the displayed address",
+                                "fields": []
+                              },
+                              {
+                                "name": "latitude",
+                                "mode": "",
+                                "type": "FLOAT",
+                                "description": "The geocode latitude for the displayed address",
+                                "fields": []
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "countrycode",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Country code of the listing address (e.g., 'AU')",
+                        "fields": []
+                      },
+                      {
+                        "name": "ishidden",
+                        "mode": "",
+                        "type": "BOOLEAN",
+                        "description": "true, if the Agent chooses to hide the listing street address from the consumer",
+                        "fields": []
+                      },
+                      {
+                        "name": "suburb",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Suburb of the listing address",
+                        "fields": []
+                      },
+                      {
+                        "name": "streetname",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Street name of the listing address",
+                        "fields": []
+                      },
+                      {
+                        "name": "state",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "State of the listing address",
+                        "fields": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "primaryusage",
+                    "mode": "REPEATED",
+                    "type": "RECORD",
+                    "description": "past project primary usage",
+                    "fields": [
+                      {
+                        "name": "id",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "",
+                        "fields": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "mainimage",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "past project main image",
+                    "fields": [
+                      {
+                        "name": "id",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "",
+                        "fields": []
+                      },
+                      {
+                        "name": "sha",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "",
+                        "fields": []
+                      },
+                      {
+                        "name": "extension",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "",
+                        "fields": []
+                      },
+                      {
+                        "name": "orderindex",
+                        "mode": "",
+                        "type": "INTEGER",
+                        "description": "",
+                        "fields": []
+                      },
+                      {
+                        "name": "type",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "",
+                        "fields": []
+                      },
+                      {
+                        "name": "caption",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "",
+                        "fields": []
+                      },
+                      {
+                        "name": "templatedurl",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "",
+                        "fields": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "projectsalesteam",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "_links",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "self",
+                        "mode": "",
+                        "type": "RECORD",
+                        "description": "",
+                        "fields": [
+                          {
+                            "name": "href",
+                            "mode": "",
+                            "type": "STRING",
+                            "description": "DEPRECATED",
+                            "fields": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "id",
+                    "mode": "",
+                    "type": "INTEGER",
+                    "description": "REA salesperson ID of the salesperson attached to the listing",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "secondaryusage_v2",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "Array of usages other than Primary",
+                "fields": [
+                  {
+                    "name": "id",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "websiteurl",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "Website URL",
+                "fields": [
+                  {
+                    "name": "href",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Website Url href",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "tour",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "href",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "URL for tour of the listing",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "threedtour",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "href",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "URL for 3d tour of the listing",
+                    "fields": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "numLivingAreas",
+            "mode": "",
+            "type": "INTEGER",
+            "description": "Number of living areas available",
+            "fields": []
+          },
+          {
+            "name": "newConstruction",
+            "mode": "",
+            "type": "BOOLEAN",
+            "description": "true, if the listing is a new and NOT an established listing",
+            "fields": []
+          },
+          {
+            "name": "crossover",
+            "mode": "",
+            "type": "STRING",
+            "description": "Where does the crossover exist for the listed property",
+            "fields": []
+          },
+          {
+            "name": "totalSize",
+            "mode": "",
+            "type": "INTEGER",
+            "description": "DEPRECATED",
+            "fields": []
+          },
+          {
+            "name": "id",
+            "mode": "",
+            "type": "INTEGER",
+            "description": "",
+            "fields": []
+          },
+          {
+            "name": "rightDepth",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "unit",
+                "mode": "",
+                "type": "STRING",
+                "description": "Unit of measure for the right depth. Always m.",
+                "fields": []
+              },
+              {
+                "name": "value",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "DEPRECATED",
+                "fields": []
+              },
+              {
+                "name": "rawValue",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "Right depth value for the listed property",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "councilRates",
+            "mode": "",
+            "type": "STRING",
+            "description": "Council rates for the listed property",
+            "fields": []
+          },
+          {
+            "name": "numToilets",
+            "mode": "",
+            "type": "INTEGER",
+            "description": "The number of toilets available",
+            "fields": []
+          },
+          {
+            "name": "title",
+            "mode": "",
+            "type": "STRING",
+            "description": "Title of a specific listing.",
+            "fields": []
+          },
+          {
+            "name": "parkingSpaces",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "numCarportSpaces",
+                "mode": "",
+                "type": "INTEGER",
+                "description": "Number of carports available",
+                "fields": []
+              },
+              {
+                "name": "numGarageSpaces",
+                "mode": "",
+                "type": "INTEGER",
+                "description": "Number of garage spaces available",
+                "fields": []
+              },
+              {
+                "name": "numOpenSpaces",
+                "mode": "",
+                "type": "INTEGER",
+                "description": "Number of open spaces available for parking",
+                "fields": []
+              },
+              {
+                "name": "total",
+                "mode": "",
+                "type": "INTEGER",
+                "description": "Number of total parking spaces available",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "address",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "streetNumber",
+                "mode": "",
+                "type": "STRING",
+                "description": "number of the listing address",
+                "fields": []
+              },
+              {
+                "name": "_embedded",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "atlasObject",
+                    "mode": "REPEATED",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "subtype",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Type of the Atlas object - one of the possible list of values",
+                        "fields": []
+                      },
+                      {
+                        "name": "id",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Unique Atlas object id for the address of the listing",
+                        "fields": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "postcode",
+                "mode": "",
+                "type": "STRING",
+                "description": "Postcode of the display home address",
+                "fields": []
+              },
+              {
+                "name": "display",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "communicationAddress",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "The communication address to be displayed to the consumer for the listing.",
+                    "fields": []
+                  },
+                  {
+                    "name": "shortAddress",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "The short address to be displayed for the listing. Usually, just the street number and name.",
+                    "fields": []
+                  },
+                  {
+                    "name": "fullAddress",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "The full address to be displayed for the listing.",
+                    "fields": []
+                  },
+                  {
+                    "name": "geocode",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "reliability",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "The geocode reliability, based upon AS4590-1999",
+                        "fields": []
+                      },
+                      {
+                        "name": "longitude",
+                        "mode": "",
+                        "type": "FLOAT",
+                        "description": "The geocode longitude for the displayed address",
+                        "fields": []
+                      },
+                      {
+                        "name": "latitude",
+                        "mode": "",
+                        "type": "FLOAT",
+                        "description": "The geocode latitude for the displayed address",
+                        "fields": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "countryCode",
+                "mode": "",
+                "type": "STRING",
+                "description": "Country code of the listing address (e.g., 'AU')",
+                "fields": []
+              },
+              {
+                "name": "isHidden",
+                "mode": "",
+                "type": "BOOLEAN",
+                "description": "true, if the Agent chooses to hide the listing street address from the consumer",
+                "fields": []
+              },
+              {
+                "name": "suburb",
+                "mode": "",
+                "type": "STRING",
+                "description": "Suburb of the listing address",
+                "fields": []
+              },
+              {
+                "name": "streetName",
+                "mode": "",
+                "type": "STRING",
+                "description": "Street name of the listing address",
+                "fields": []
+              },
+              {
+                "name": "state",
+                "mode": "",
+                "type": "STRING",
+                "description": "State of the listing address",
+                "fields": []
+              },
+              {
+                "name": "ishiddentostatelevel",
+                "mode": "",
+                "type": "BOOLEAN",
+                "description": "if true, address, suburb, and postcode will be hidden",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "irrigation",
+            "mode": "",
+            "type": "STRING",
+            "description": "Irrigation details for the listed property",
+            "fields": []
+          },
+          {
+            "name": "otherFeatures",
+            "mode": "",
+            "type": "STRING",
+            "description": "",
+            "fields": []
+          },
+          {
+            "name": "externalListingId",
+            "mode": "",
+            "type": "STRING",
+            "description": "External listing ID provided by the customer",
+            "fields": []
+          },
+          {
+            "name": "publication",
+            "mode": "REPEATED",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "startDate",
+                "mode": "",
+                "type": "TIMESTAMP",
+                "description": "Start date and time (UTC) for this publication record",
+                "fields": []
+              },
+              {
+                "name": "endDate",
+                "mode": "",
+                "type": "TIMESTAMP",
+                "description": "End date and time (UTC) for this publication record",
+                "fields": []
+              },
+              {
+                "name": "type",
+                "mode": "",
+                "type": "STRING",
+                "description": "Type of the publication record",
+                "fields": []
+              },
+              {
+                "name": "audience",
+                "mode": "",
+                "type": "STRING",
+                "description": "Where the listing is published and available to view",
+                "fields": []
+              },
+              {
+                "name": "data",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "showAgencyBranding",
+                    "mode": "",
+                    "type": "BOOLEAN",
+                    "description": "Determines if agency branding is to be displayed or not for this publication record",
+                    "fields": []
+                  },
+                  {
+                    "name": "productId",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "REA product ID of the purchased product for this publication record of the listing",
+                    "fields": []
+                  },
+                  {
+                    "name": "parentId",
+                    "mode": "",
+                    "type": "INTEGER",
+                    "description": "For a child listing, the listing_id of the project parent.  When this field is populated, it indicates that this is a child listing (internal or external)",
+                    "fields": []
+                  },
+                  {
+                    "name": "rotation",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "frequency",
+                        "mode": "",
+                        "type": "INTEGER",
+                        "description": "Determines how frequently should the listing be rotated in search results for this publication record",
+                        "fields": []
+                      },
+                      {
+                        "name": "baseDate",
+                        "mode": "",
+                        "type": "TIMESTAMP",
+                        "description": "Base datetime (UTC) to determine rotation of the listing for this publication record in search results",
+                        "fields": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "eBrochureId",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "",
+                    "fields": []
+                  },
+                  {
+                    "name": "clasId",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Unique identifier for call lead attribution entry (UUID)",
+                    "fields": []
+                  },
+                  {
+                    "name": "originalPhoneNumber",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Salesperson's original phone number, put in via AA",
+                    "fields": []
+                  },
+                  {
+                    "name": "salespersonId",
+                    "mode": "",
+                    "type": "INTEGER",
+                    "description": "unique identifier of salesperson",
+                    "fields": []
+                  },
+                  {
+                    "name": "trackedPhoneNumber",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "The phone number provided by 3rd party vendor (Iovox), will be shown on PLW and Native Apps instead of original phone number. Calls made to this number will be redirected to originalPhoneNumber, along with tracking some meta data of the call.",
+                    "fields": []
+                  },
+                  {
+                    "name": "features",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "propertyprofilebranding",
+                        "mode": "",
+                        "type": "BOOLEAN",
+                        "description": "Determines if additional agency information in P4EP is to be displayed or not for this publication record",
+                        "fields": []
+                      },
+                      {
+                        "name": "propertycardthumbnails",
+                        "mode": "NULLABLE",
+                        "type": "BOOLEAN",
+                        "description": "Determines if to be displayed in home page to relevant consumers for this publication record",
+                        "fields": []
+                      },
+                      {
+                        "name": "amplify",
+                        "mode": "NULLABLE",
+                        "type": "BOOLEAN",
+                        "description": "Determines if more exposure should be applied to this publication record",
+                        "fields": []
+                      },
+                      {
+                        "name": "listingcommsuplift",
+                        "mode": "NULLABLE",
+                        "type": "BOOLEAN",
+                        "description": "Determines if have some different visual experience in SRP for this publication record",
+                        "fields": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "productvariant",
+                    "mode": "NULLABLE",
+                    "type": "STRING",
+                    "description": "Determines if additional Luxe feature should be applied to this publication record",
+                    "fields": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "_links",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "projectWebsite",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "href",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Link to the project website",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "adUrl",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "href",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "URL for project profile advertisement",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "agencyUrl",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "href",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "Link to the agency website",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "threeDTour",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "href",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "URL for 3d tour of the listing",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "tour",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "href",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "URL to view a tour of the listing",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "self",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "href",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "onlineAuction",
+                "mode": "REPEATED",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "href",
+                    "mode": "",
+                    "type": "STRING",
+                    "description": "URL for online auctions of the listing",
+                    "fields": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "projectBranding",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "primaryColor",
+                "mode": "",
+                "type": "STRING",
+                "description": "Primary display color for project profile branding bar",
+                "fields": []
+              },
+              {
+                "name": "textColor",
+                "mode": "",
+                "type": "STRING",
+                "description": "Text display color for project profile",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "fencing",
+            "mode": "",
+            "type": "STRING",
+            "description": "Fencing details for the listed property",
+            "fields": []
+          },
+          {
+            "name": "yearBuilt",
+            "mode": "",
+            "type": "STRING",
+            "description": "Year in which the listed property was built",
+            "fields": []
+          },
+          {
+            "name": "audiences",
+            "mode": "REPEATED",
+            "type": "STRING",
+            "description": "DEPRECATED",
+            "fields": []
+          },
+          {
+            "name": "dateSold",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "display",
+                "mode": "",
+                "type": "STRING",
+                "description": "Listing sold date to be displayed to the consumer",
+                "fields": []
+              },
+              {
+                "name": "date",
+                "mode": "",
+                "type": "STRING",
+                "description": "Date the listing was sold",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "leftDepth",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "unit",
+                "mode": "",
+                "type": "STRING",
+                "description": "Unit of measure for the left depth. Always m.",
+                "fields": []
+              },
+              {
+                "name": "value",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "DEPRECATED",
+                "fields": []
+              },
+              {
+                "name": "rawValue",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "The left depth value for the listed property",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "frontage",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "unit",
+                "mode": "",
+                "type": "STRING",
+                "description": "Unit of measure for the frontage. Always m.",
+                "fields": []
+              },
+              {
+                "name": "value",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "DEPRECATED",
+                "fields": []
+              },
+              {
+                "name": "rawValue",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "Frontage value for the listed property",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "marketFlags",
+            "mode": "REPEATED",
+            "type": "STRING",
+            "description": "DEPRECATED",
+            "fields": []
+          },
+          {
+            "name": "numBedrooms",
+            "mode": "",
+            "type": "INTEGER",
+            "description": "Number of bedrooms available",
+            "fields": []
+          },
+          {
+            "name": "financialTerms",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "purchase",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "isHidden",
+                    "mode": "",
+                    "type": "BOOLEAN",
+                    "description": "TRUE, if Agent has chosen to hide the price for the listing",
+                    "fields": []
+                  },
+                  {
+                    "name": "display",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "price",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Price to display for the listed property",
+                        "fields": []
+                      },
+                      {
+                        "name": "showQldDisclaimer",
+                        "mode": "",
+                        "type": "BOOLEAN",
+                        "description": "true, if a listed property is in QLD state and for Auction",
+                        "fields": []
+                      },
+                      {
+                        "name": "tax",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Tax amount for Puchase.Display",
+                        "fields": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "price",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "mode": "",
+                        "type": "INTEGER",
+                        "description": "Purchase price for the listed property",
+                        "fields": []
+                      },
+                      {
+                        "name": "minvalue",
+                        "mode": "",
+                        "type": "INTEGER",
+                        "description": "Min Purchase price for the listed property",
+                        "fields": []
+                      },
+                      {
+                        "name": "maxvalue",
+                        "mode": "",
+                        "type": "INTEGER",
+                        "description": "Max Purchase price for the listed property",
+                        "fields": []
+                      },
+                      {
+                        "name": "taxtype",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Tax Type related to Purchase Price",
+                        "fields": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "ispricehidden",
+                    "mode": "",
+                    "type": "BOOLEAN",
+                    "description": "TRUE, if Agent has chosen to hide the price for the listing",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "lease",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "isHidden",
+                    "mode": "",
+                    "type": "BOOLEAN",
+                    "description": "TRUE, if Agent has chosen to hide the price for the rental listing",
+                    "fields": []
+                  },
+                  {
+                    "name": "display",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "bond",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Bond value for the rental listing",
+                        "fields": []
+                      },
+                      {
+                        "name": "pricePerWeek",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Price per week to display to consumer for the rental listing",
+                        "fields": []
+                      },
+                      {
+                        "name": "pricePerMonth",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Price per month to display to consumer for the rental listing",
+                        "fields": []
+                      },
+                      {
+                        "name": "advertisingRange",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Calculated price range for which the listed property is to be displayed in leased search results when filtered by price",
+                        "fields": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "bond",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "mode": "",
+                        "type": "INTEGER",
+                        "description": "Price per week for the rental listing",
+                        "fields": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "pricePerWeek",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "mode": "",
+                        "type": "INTEGER",
+                        "description": "Price per week for the rental listing",
+                        "fields": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "pricePerMonth",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "mode": "",
+                        "type": "INTEGER",
+                        "description": "Price per month for the rental listing",
+                        "fields": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "leaseterms",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "plusoutgoings",
+                    "mode": "",
+                    "type": "BOOLEAN",
+                    "description": "If true, Outgoing expenses will be extra",
+                    "fields": []
+                  },
+                  {
+                    "name": "annualoutgoings",
+                    "mode": "",
+                    "type": "INTEGER",
+                    "description": "Annual Outgoings amount",
+                    "fields": []
+                  },
+                  {
+                    "name": "ispricehidden",
+                    "mode": "",
+                    "type": "BOOLEAN",
+                    "description": "If true, Price hidden",
+                    "fields": []
+                  },
+                  {
+                    "name": "price",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "pa",
+                        "mode": "",
+                        "type": "INTEGER",
+                        "description": "Amount Per Annum",
+                        "fields": []
+                      },
+                      {
+                        "name": "taxtype",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Whether tax is inclusive or exclusive in the price quoted",
+                        "fields": []
+                      },
+                      {
+                        "name": "minpsmpa",
+                        "mode": "",
+                        "type": "INTEGER",
+                        "description": "Minimum per square metre per annum",
+                        "fields": []
+                      },
+                      {
+                        "name": "maxpsmpa",
+                        "mode": "",
+                        "type": "INTEGER",
+                        "description": "Maximum per square meter per annum",
+                        "fields": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "display",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "pricepa",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Displayed Price Per annum",
+                        "fields": []
+                      },
+                      {
+                        "name": "pricepsmpa",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Price per square meter per annum",
+                        "fields": []
+                      },
+                      {
+                        "name": "tax",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Informational eg. \"Includes GST\"",
+                        "fields": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "sold",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "ispricehidden",
+                    "mode": "",
+                    "type": "BOOLEAN",
+                    "description": "If true, Sold price hidden",
+                    "fields": []
+                  },
+                  {
+                    "name": "display",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "price",
+                        "mode": "",
+                        "type": "STRING",
+                        "description": "Sold Price",
+                        "fields": []
+                      }
+                    ]
+                  },
+                  {
+                    "name": "price",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "value",
+                        "mode": "",
+                        "type": "INTEGER",
+                        "description": "Sold price Amount",
+                        "fields": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "numEnsuites",
+            "mode": "",
+            "type": "INTEGER",
+            "description": "Number of ensuites available",
+            "fields": []
+          },
+          {
+            "name": "buildingSize",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "unit",
+                "mode": "",
+                "type": "STRING",
+                "description": "Unit of measure for the building size",
+                "fields": []
+              },
+              {
+                "name": "value",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "DEPRECATED",
+                "fields": []
+              },
+              {
+                "name": "rawValue",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "Size of the house / building",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "improvements",
+            "mode": "",
+            "type": "STRING",
+            "description": "Improvements details for the listed property",
+            "fields": []
+          },
+          {
+            "name": "dateTimeActive",
+            "mode": "",
+            "type": "TIMESTAMP",
+            "description": "An ISO-8601 timestamp (UTC) representing when the listing was published",
+            "fields": []
+          },
+          {
+            "name": "isOnTheMarket",
+            "mode": "",
+            "type": "BOOLEAN",
+            "description": "DEPRECATED",
+            "fields": []
+          },
+          {
+            "name": "dateActive",
+            "mode": "",
+            "type": "DATE",
+            "description": "DEPRECATED",
+            "fields": []
+          },
+          {
+            "name": "annualRainfall",
+            "mode": "",
+            "type": "STRING",
+            "description": "Annual rainfall received at the listed property",
+            "fields": []
+          },
+          {
+            "name": "name",
+            "mode": "",
+            "type": "STRING",
+            "description": "Name of the project",
+            "fields": []
+          },
+          {
+            "name": "emailAddresses",
+            "mode": "REPEATED",
+            "type": "STRING",
+            "description": "Email addresses to contact on for project profile enquiries",
+            "fields": []
+          },
+          {
+            "name": "lastModifiedAt",
+            "mode": "",
+            "type": "TIMESTAMP",
+            "description": "An ISO-8601 timestamp (UTC) representing the last modified datetime of a listing",
+            "fields": []
+          },
+          {
+            "name": "listingStatuses",
+            "mode": "REPEATED",
+            "type": "STRING",
+            "description": "",
+            "fields": []
+          },
+          {
+            "name": "carryingCapacity",
+            "mode": "",
+            "type": "STRING",
+            "description": "Carrying capacity of the listed property",
+            "fields": []
+          },
+          {
+            "name": "publicationMetadata",
+            "mode": "",
+            "type": "RECORD",
+            "description": "",
+            "fields": [
+              {
+                "name": "marketFlags",
+                "mode": "REPEATED",
+                "type": "STRING",
+                "description": "Zero or more flags indicating the market status of the listing",
+                "fields": []
+              },
+              {
+                "name": "dateTimeExpiry",
+                "mode": "",
+                "type": "TIMESTAMP",
+                "description": "A UTC date time of when the listing/project expired",
+                "fields": []
+              },
+              {
+                "name": "audiences",
+                "mode": "REPEATED",
+                "type": "STRING",
+                "description": "Zero or more audience strings",
+                "fields": []
+              },
+              {
+                "name": "agencyFlags",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "isSuspended",
+                    "mode": "",
+                    "type": "BOOLEAN",
+                    "description": "true, if the agency associated with the listing is suspended",
+                    "fields": []
+                  },
+                  {
+                    "name": "validSubscription",
+                    "mode": "",
+                    "type": "BOOLEAN",
+                    "description": "true, if the agency associated with the listing has valid subscription",
+                    "fields": []
+                  },
+                  {
+                    "name": "sameAsParent",
+                    "mode": "",
+                    "type": "BOOLEAN",
+                    "description": "true for internal project child, false for external project child, NULL for all other non-child listings",
+                    "fields": []
+                  }
+                ]
+              },
+              {
+                "name": "parentPublicationMetadata",
+                "mode": "",
+                "type": "RECORD",
+                "description": "",
+                "fields": [
+                  {
+                    "name": "marketFlags",
+                    "mode": "REPEATED",
+                    "type": "STRING",
+                    "description": "Zero or more flags indicating the market status of the project parent, if applicable",
+                    "fields": []
+                  },
+                  {
+                    "name": "dateTimeExpiry",
+                    "mode": "",
+                    "type": "TIMESTAMP",
+                    "description": "A UTC date time of when the project parent expired",
+                    "fields": []
+                  },
+                  {
+                    "name": "audiences",
+                    "mode": "REPEATED",
+                    "type": "STRING",
+                    "description": "Zero or more audience strings of the project parent",
+                    "fields": []
+                  },
+                  {
+                    "name": "agencyFlags",
+                    "mode": "",
+                    "type": "RECORD",
+                    "description": "",
+                    "fields": [
+                      {
+                        "name": "isSuspended",
+                        "mode": "",
+                        "type": "BOOLEAN",
+                        "description": "true, if the agency associated with the project parent is suspended",
+                        "fields": []
+                      },
+                      {
+                        "name": "validSubscription",
+                        "mode": "",
+                        "type": "BOOLEAN",
+                        "description": "true, if the agency associated with the project parent has valid subscription",
+                        "fields": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "dateLeased",
+            "mode": "",
+            "type": "DATE",
+            "description": "Date the listing was leased",
+            "fields": []
+          },
+          {
+            "name": "propertyTypeGroup",
+            "mode": "",
+            "type": "STRING",
+            "description": "Possible values are land, unit, house or other",
+            "fields": []
+          },
+          {
+            "name": "listingCategoryGroup",
+            "mode": "",
+            "type": "STRING",
+            "description": "A broad categorisation of listing types",
+            "fields": []
+          },
+          {
+            "name": "auctionoutcome",
+            "mode": "",
+            "type": "RECORD",
+            "description": "Auction outcome",
+            "fields": [
+              {
+                "name": "auctioneddate",
+                "mode": "",
+                "type": "DATE",
+                "description": "Date of happened auction",
+                "fields": []
+              },
+              {
+                "name": "auctionmaxbid",
+                "mode": "",
+                "type": "INTEGER",
+                "description": "Max bid during the auction",
+                "fields": []
+              },
+              {
+                "name": "auctionresult",
+                "mode": "",
+                "type": "STRING",
+                "description": "Result of happened auction",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "authoritytype",
+            "mode": "",
+            "type": "STRING",
+            "description": "Authority type",
+            "fields": []
+          },
+          {
+            "name": "zoning",
+            "mode": "",
+            "type": "STRING",
+            "description": "Type of zoning applicable to the property",
+            "fields": []
+          },
+          {
+            "name": "municipality",
+            "mode": "",
+            "type": "STRING",
+            "description": "Distinct governed zone the property is in",
+            "fields": []
+          },
+          {
+            "name": "floorarea",
+            "mode": "",
+            "type": "RECORD",
+            "description": "Floor Area",
+            "fields": [
+              {
+                "name": "min",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "Min Floor Area",
+                "fields": []
+              },
+              {
+                "name": "unit",
+                "mode": "",
+                "type": "STRING",
+                "description": "Floor Area Unit",
+                "fields": []
+              },
+              {
+                "name": "max",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "Min Floor Area",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "carspaces",
+            "mode": "",
+            "type": "RECORD",
+            "description": "Car Spaces",
+            "fields": [
+              {
+                "name": "value",
+                "mode": "",
+                "type": "FLOAT",
+                "description": "Number Car Spaces",
+                "fields": []
+              },
+              {
+                "name": "comments",
+                "mode": "",
+                "type": "STRING",
+                "description": "Car Spaces Comments",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "entireproperty",
+            "mode": "",
+            "type": "BOOLEAN",
+            "description": "If true, includes Entire Property",
+            "fields": []
+          },
+          {
+            "name": "tenuretype",
+            "mode": "",
+            "type": "STRING",
+            "description": "Tenure Type",
+            "fields": []
+          },
+          {
+            "name": "netincomepa",
+            "mode": "",
+            "type": "FLOAT",
+            "description": "Net Income Per Annum",
+            "fields": []
+          },
+          {
+            "name": "fullyoccupied",
+            "mode": "",
+            "type": "BOOLEAN",
+            "description": "Fully Occupied",
+            "fields": []
+          },
+          {
+            "name": "numberoftenants",
+            "mode": "",
+            "type": "FLOAT",
+            "description": "No of Tenants",
+            "fields": []
+          },
+          {
+            "name": "keytenant",
+            "mode": "",
+            "type": "STRING",
+            "description": "Key Tenant",
+            "fields": []
+          },
+          {
+            "name": "returnoninvestment",
+            "mode": "",
+            "type": "FLOAT",
+            "description": "Return On Investment",
+            "fields": []
+          },
+          {
+            "name": "multipleproperties",
+            "mode": "",
+            "type": "BOOLEAN",
+            "description": "Multiple Properties",
+            "fields": []
+          },
+          {
+            "name": "leasedetails",
+            "mode": "",
+            "type": "RECORD",
+            "description": "Lease Details",
+            "fields": [
+              {
+                "name": "leaseterm",
+                "mode": "",
+                "type": "STRING",
+                "description": "Lease Term",
+                "fields": []
+              },
+              {
+                "name": "leaseexpiry",
+                "mode": "",
+                "type": "STRING",
+                "description": "Lease Expiry",
+                "fields": []
+              },
+              {
+                "name": "leaseddate",
+                "mode": "",
+                "type": "DATE",
+                "description": "Leased Date",
+                "fields": []
+              }
+            ]
+          },
+          {
+            "name": "datepremarketstart",
+            "mode": "",
+            "type": "TIMESTAMP",
+            "description": "An ISO-8601 timestamp (UTC) representing Date from which this listing is active as a 'pre-market' listing",
+            "fields": []
+          },
+          {
+            "name": "datepremarketend",
+            "mode": "",
+            "type": "TIMESTAMP",
+            "description": "An ISO-8601 timestamp (UTC) representing Date from which this listing is ended as a 'pre-market' listing",
+            "fields": []
+          },
+          {
+            "name": "exclusivity",
+            "mode": "",
+            "type": "STRING",
+            "description": "If a listing is \"Exclusive\" to one agency or \"Open\" to many",
+            "fields": []
+          },
+          {
+            "name": "optimised",
+            "mode": "",
+            "type": "BOOLEAN",
+            "description": "Indicator whether listing has been optimised",
+            "fields": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "eventId",
+    "mode": "",
+    "type": "STRING",
+    "description": "Unique ID of the event that created this listing publisher record",
+    "fields": []
+  },
+  {
+    "name": "listingsegment",
+    "mode": "",
+    "type": "STRING",
+    "description": "Refers to the segment that the listing belongs to, it is used to differentiate between residential or commercial listings.\nPossible values: \"rea\" (for a residential listing) or \"rca\" (for a commercial listing).",
+    "fields": []
+  }
+]

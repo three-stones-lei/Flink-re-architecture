@@ -1,0 +1,44 @@
+sameple with windows: (1. normal  2.delay 5s  3.delay close window 5s  4.put into sideoutput)
+hour: 13----14, (listing_id: 1, expand_map: 2, video_played: 1; listing_id:2, expand_map:0, video_played:2)
+{"collector_tstamp":"2024-03-31 13:23:44","event_name":"expand_map","listing_id":"1"}
+{"collector_tstamp":"2024-03-31 13:25:44","event_name":"video_played","listing_id":"1"}
+{"collector_tstamp":"2024-03-31 13:27:44","event_name":"video_played","listing_id":"2"}
+{"collector_tstamp":"2024-03-31 13:28:44","event_name":"video_played","listing_id":"2"}
+{"collector_tstamp":"2024-03-31 13:59:44","event_name":"expand_map","listing_id":"1"}
+
+later arriving event:
+{"collector_tstamp":"2024-03-31 13:59:45","event_name":"expand_map","listing_id":"1"}
+
+
+hour: 14----15, (listing_id:1, expand_map: 3, video_played:1)
+{"collector_tstamp":"2024-03-31 14:00:01","event_name":"expand_map","listing_id":"1"}
+{"collector_tstamp":"2024-03-31 14:00:04","event_name":"expand_map","listing_id":"1"}
+{"collector_tstamp":"2024-03-31 14:00:05","event_name":"expand_map","listing_id":"1"}
+{"collector_tstamp":"2024-03-31 14:33:59","event_name":"video_played","listing_id":"1"}
+
+hour: 15----16
+{"collector_tstamp":"2024-03-31 15:00:01","event_name":"video_played","listing_id":"1"}
+{"collector_tstamp":"2024-03-31 15:00:05","event_name":"video_played","listing_id":"1"}
+
+sameple without windows:
+{"collector_tstamp":"2024-03-31 13:59:44","event_name":"expand_map","listing_id":"1"}
+{"collector_tstamp":"2024-03-31 14:34:59","event_name":"expand_map","listing_id":"1"}
+{"collector_tstamp":"2024-03-31 14:35:59","event_name":"expand_map","listing_id":"1"}
+{"collector_tstamp":"2024-03-31 14:33:59","event_name":"video_played","listing_id":"1"}
+{"collector_tstamp":"2024-03-31 16:00:05","event_name":"video_played","listing_id":"1"}
+
+{"collector_tstamp":"2024-03-31 15:35:59","event_name":"expand_map","listing_id":"2"}
+{"collector_tstamp":"2024-03-31 16:00:00","event_name":"video_played","listing_id":"2"}
+{"collector_tstamp":"2024-03-31 16:00:05","event_name":"expand_map","listing_id":"2"}
+
+{"collector_tstamp":"2024-03-31 14:35:59","event_name":"expand_map","listing_id":"1"}
+{"collector_tstamp":"2024-03-31 14:33:59","event_name":"video_played","listing_id":"1"}
+
+{"collector_tstamp":"2024-03-31 16:00:05","event_name":"expand_map","listing_id":"6"}
+{"collector_tstamp":"2024-03-31 16:04:05","event_name":"expand_map","listing_id":"6"}
+{"collector_tstamp":"2024-03-31 13:59:59","event_name":"expand_map"}
+
+
+
+
+

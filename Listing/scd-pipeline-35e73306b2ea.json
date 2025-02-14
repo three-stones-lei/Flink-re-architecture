@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "scd-pipeline",
+  "private_key_id": "35e73306b2ea822d22fe7998b13046fcae1a4ad2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCckCGvL97vVosr\nEyqT4t5A4A6TlPoWxMh7ieR+Q74uYJ7uJ/UVmgFCcZSnKXCfro4D1QpT2tzUOQfb\ncEnsRmuK8XwW0v7QDq7j5Tl56B3mDNiBcCs+XsUkJ2IahUMcXZhPwCAsHe/sFHaW\nUZPve5uRra8TOzS6dQ5ubh5oujFKuRGiwG6bthFFS3RDZ4CZyz5ulpC9LLSghAee\naMqv8BmDSBxq6s9zTWEPw43/2usP5TNf6KNGo0z+xvn+3jkeiiMXFVqVHtlvdEqY\neH3m2sUeEHyynGV3gu8FPWU0wa3F1Reyx9uf1vUaEInx9A1byBPY48ATXLiv+miH\nvCiE5LQ9AgMBAAECggEAB/vzs87sVBFPnz6RenbkiwjCGuBLPAkEs67Nt8C1p1Yn\nFLx167LtuIPj/FMJMCODO4p28Igl9dlYtLtOZx2/k0I1vVDnohhK7p/8eo04pR2S\nQaZE65/X9ubel71PCwMc5t2Z5mtlFl7Zc1itWNZZZyhP2C+57yj+t5P8ZK6GH/9+\nuCGTbD7QjRIMBXp05mDl/1/UA1TKWEn736zzsXNn7owuUEo8+j/unUiNKP06GlG0\nXBsP7eCKOzdpAf9czn6LiGEvPQrfX9mnDZuUWF2LuQulbLz/m1ZzTCqrpyH7WaOZ\n/dkJsObFSX9u529kBpngc4h9b39+ycwfW4MImpmPAQKBgQDJVzMcziy2mW6GlWoo\nOFHYY/gVJLwxVaDwoxbU2oY33fjLqbAAPQOLu59E0trmUHjDEjSPK9Xv03Gp+C2Z\n6lUfRsQWh8gu+vXXNfNt6xjvitHdiEVqzRnLvzp/gQyhlgMCInbgrvqCQ7S4xZSA\nTIvqv8mbZjMqDxN3KfjtlFlrgQKBgQDHEPiTptY8IXUbXioZmLqXl3S+/RccU8kS\nlzihJnvkBhgjTzlO3Ka6+b6bjYIZSPSdTlkDyAqe2CacCwCHD7HGz1sp0CEHXOmr\nHWF8misL2ZVewZLdRxko/xxHCJeIlXf1NJONhtQItFHnwQaF0lxQg51hw3HROFDT\njAXV0kNWvQKBgQCLKPMR+Mrc1oWXDdSWwf6H0ujYLFDKxIV9bSvNqNBV8t0QX1Nf\nhsxZmy+FETvtLjeZlI6xWjn/DiUktn1GQbnd6TqE3AqXtiuPOSHsmi7c+hT9yj84\nh1RKB/01vYtub9HaetmxiB9rQ8K4Zw+x8bZPZYnCF8xLSKpKlb8Q7pUzgQKBgHwT\nB9x/0GgKMoOsXXE20JZLwGiKNy1gy6LavmEzK2Ukp0bayk1tGj7QCw3JVZ2M62pg\nuvqwZG49K1N3SAzmq1fPRnL5VpzQPJR665hOPyZTp9Y3sOJavkPfPjDIGir3fp1G\n9/DuaJpESgi5NueSBhfo8N9OglJ1V2uDit+K/o3BAoGAdPABXgRBClFswVZGQQGG\nYsEP0QWCpdG+MsW0BeUCklu1aYpYzetfIC7QzOrEaxZD9TPcWmSC3XizeT91svgm\nRS0SpiWspRfIpQzfijTgCZJ1crp40mN1d8jn8gbpLi5eHqMzAkzXRC1skKXPkd77\nBS1yDtEGJ8WFoj71RttPB60=\n-----END PRIVATE KEY-----\n",
+  "client_email": "github-access@scd-pipeline.iam.gserviceaccount.com",
+  "client_id": "102139064427908671402",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/github-access%40scd-pipeline.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
